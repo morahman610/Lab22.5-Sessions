@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<style>
+body {
+    background-color: @Session["color"]
+}
+</style>
+
+<body>
+    <h2>Welcome</h2>
+
+    @Session["fullName"]
+    @Session["username"]
+    @Session["Color"]
+</body>

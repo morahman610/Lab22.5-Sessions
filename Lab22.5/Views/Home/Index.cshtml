@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Register</h1>
+
+<style>
+body {
+    background-color: @Session["color"]
+}
+</style>
+<body>
+    <form id="login" action="/Home/Login" method="post">
+
+        Full Name<input type="text" name="fullName" value=@Session["fullName"]/><br />
+        Username <input type="text" name="Username" value=@Session["username"]/><br />
+        Color
+        <select name="color" id="selectColor">
+            <option value="LightGray">Light Gray</option>
+            <option value="LightSeaGreen">Light Sea Green</option>
+            <option value="BurlyWood">Burly Wood</option>
+            <option value="Yellow">Yellow</option>
+        </select><br />
+
+        <input type="submit" value="SUBMIT" onclick="ChangeColor" />
+
+    </form>
+</body>
+
+
+
